@@ -319,6 +319,9 @@ h2.section-title {
 
 /*curriculam section style end*/
 /*story section style start*/
+.story-section{
+    background: url("/assets/image/bg.png"), linear-gradient(#f7f7f7,var(--secondary-color) 215%);
+}
 .story-section__wrapper {
     display: grid;
     grid-template-columns: 45% repeat(2, 1fr);
@@ -428,7 +431,64 @@ h2.section-title {
 .story-card.mobile-card{
     display: none;
 }
+.section-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
 /*story section style end*/
+
+/*footer section style start*/
+footer{
+    background-color: var(--primary-color);
+    padding: 80px 0;
+}
+footer .footer-wrapper{
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    gap: 30px;
+}
+.footer-section > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.footer-section > ul li a{
+    font-size: 19px;
+    font-weight: 500;
+    color: white;
+    transition: .6s;
+}
+.footer-logo > a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-size: 22px;
+}
+.footer-section > p {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.8rem;
+    color: white;
+    margin-top: 30px;
+}
+.footer-section.footer-links > h3{
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: white;
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-section > ul li a:hover {
+    color: black;
+    transition: .6s;
+}
+/*footer section style end*/
 
 
 
@@ -534,6 +594,11 @@ h2.section-title {
         display: none;
     }
 
+    /*style for footer*/
+    footer .footer-wrapper{
+        grid-template-columns: 2fr 1fr;
+    }
+
 }
 
 /*style for medium screen size*/
@@ -589,11 +654,15 @@ h2.section-title {
     .story-card:nth-child(5) {
         display: block;
     }
-
+ /*style for footer*/
+ footer .footer-wrapper{
+    grid-template-columns: 1fr;
+}
 }
 
 /*style for small screen*/
 @media only screen and (max-width: 576px) {
+
     html {
         font-size: 10px;
     }
@@ -614,6 +683,22 @@ h2.section-title {
     .curriculam-secions__cards .curriculam-card>p {
         padding: 0px 20px;
         line-height: 2rem;
+    }
+    
+    /*style for footer*/
+    .footer-section > p {
+        font-size: 14px;
+    }
+    
+    .footer-section.footer-links > h3 {
+        font-size: 20px;
+    }
+    
+    .footer-section > ul li a {
+        font-size: 16px;
+    }
+    footer .footer-wrapper{
+        gap: 50px;
     }
 
 }
